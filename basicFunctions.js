@@ -10,13 +10,13 @@ export const Maybe = MaybeLogic();
 // second parameter is max example: RandomNumber(1,10) the highest value will be 10. Example: 7
 // third parameter is precision example: RandomNumber(1,10,2) the result will be random number between 1 and 10 with precision to 2 decimal places places. Example: 4.96
 export function RandomNumber(min = 1, max = 10, precision) {
-  // validateing precision
+  // validating precision
   if (arguments.length === 3 && typeof precision !== "number") {
     console.error("The precision must be a number");
     return;
   }
 
-  // validateing min and max
+  // validating min and max
   if (
     (typeof min === "number" || typeof min === "bigint") &&
     (typeof max === "number" || typeof max === "bigint") &&
